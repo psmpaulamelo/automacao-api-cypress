@@ -1,0 +1,17 @@
+# Node modules
+node_modules/
+
+# Cypress videos and screenshots
+cypress/videos/
+cypress/screenshots/
+
+# Logs
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor files
+.vscode/
+.idea/

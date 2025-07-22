@@ -1,0 +1,16 @@
+{
+  "name": "automocao_api_cypress",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "cypress open --browser chrome",
+    "test:headless": "cypress run --browser chrome --headless"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "cypress": "^14.5.2"
+  }
+}
