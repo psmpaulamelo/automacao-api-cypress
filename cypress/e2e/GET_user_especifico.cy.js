@@ -1,10 +1,16 @@
 /// <reference types="cypress" />
 
+
+
+/*teste referente a procurar de um usuário especifico em uma pagina especifica */
 describe('Apresentar dados de um id especifico em uma pagina especifica', () => {
-    it.only('Trazer os dados do id=5 da pagina=1', () => {
+    it('Trazer os dados do id=5 da pagina=2', () => {
         cy.request({
             method: 'GET',
-            url: 'https://reqres.in/api/users/5'
+            url: '/api/users/5',
+            headers: {
+             'x-api-key': Cypress.env('apiKey')
+            }
         }).then((response) => {
             expect(response.status).to.eq(200)
             expect(response.body.data.id).to.eq(5)
@@ -17,4 +23,19 @@ describe('Apresentar dados de um id especifico em uma pagina especifica', () => 
         })
 
     })
-})    
+})   
+
+
+
+describe('Validar resposta para ID inválido', () => {
+  it('Deve retornar 401 ao buscar um usuário inexistente', () => {
+        cy.request({
+        method: 'GET',
+        url: '/api/users/53', 
+        failOnStatusCode: false,
+        }).then((response) => {
+        expect(response.status).to.eq(401)
+        })
+    })
+})
+
