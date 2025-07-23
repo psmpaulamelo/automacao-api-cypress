@@ -5,6 +5,10 @@ node_modules/
 cypress/videos/
 cypress/screenshots/
 
+# Ignorar relatórios de testes
+cypress/reports/
+
+
 # Logs
 *.log
 
