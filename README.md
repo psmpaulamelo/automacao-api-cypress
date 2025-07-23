@@ -29,40 +29,40 @@ AUTOMACAO_API_CYPRESS/
    ```bash
    npm install
 
-2.Execute os testes via terminal:
-```bash
-npx cypress run
-Ou, para executar com a interface interativa:
-```bash
-npx cypress open
+2. **Execute os testes via terminal:
+    ```bash
+    npx cypress run
+    Ou, para executar com a interface interativa:
+    ```bash
+    npx cypress open
 
 🔍 Relatórios de Teste
-Após a execução dos testes, um relatório em HTML será gerado automaticamente na pasta:
-cypress/e2e/reports/
+    Após a execução dos testes, um relatório em HTML será gerado automaticamente na pasta:
+    cypress/e2e/reports/
 
 🔗 Como visualizar o relatório:
-Copie o caminho do arquivo HTML gerado (por exemplo, index.html) e abra diretamente no navegador. Exemplo:
-C:/Users/SeuUsuario/Projetos/AUTOMACAO_API_CYPRESS/cypress/e2e/reports/index.html
+    Copie o caminho do arquivo HTML gerado (por exemplo, index.html) e abra diretamente no navegador. Exemplo:
+    C:/Users/SeuUsuario/Projetos/AUTOMACAO_API_CYPRESS/cypress/e2e/reports/index.html
 
 🔌 API Utilizada
-Os testes foram criados com base na API pública Reqres:
+    Os testes foram criados com base na API pública Reqres:
 
 🌐 https://reqres.in
 
-Endpoints testados:
+    Endpoints testados:
 
-GET /users – Lista de usuários
+    GET /users – Lista de usuários
 
-GET /users/:id – Usuário específico
+    GET /users/:id – Usuário específico
 
-POST /users – Criação de novo usuário
+    POST /users – Criação de novo usuário
 
-PUT /users/:id – Atualização de usuário existente
+    PUT /users/:id – Atualização de usuário existente
 
 📦 Dependências
-Cypress
+    Cypress
 
-Mocha Reporter / HTML Report Plugin (caso aplicável)
+    Mocha Reporter / HTML Report Plugin (caso aplicável)
 
 👩‍💻 Autor
-Paula Melo – Analista de Qualidade (QA)
+    Paula Melo – Analista de Qualidade (QA)
