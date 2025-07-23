@@ -29,7 +29,7 @@ AUTOMACAO_API_CYPRESS/
    ```bash
    npm install
 
-2Execute os testes via terminal:
+2.Execute os testes via terminal:
 ```bash
 npx cypress run
 Ou, para executar com a interface interativa:
