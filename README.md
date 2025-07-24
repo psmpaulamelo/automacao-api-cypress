@@ -1,6 +1,6 @@
 # 🤖 Automação de Testes de API com Cypress
 
-Este projeto realiza testes automatizados de API REST utilizando o framework **Cypress**, com foco na API pública [Reqres.in](https://reqres.in). Foram implementados testes para os métodos HTTP `GET`, `POST` e `PUT`, garantindo a validação de funcionalidades essenciais.
+Este projeto realiza testes automatizados da API REST pública [Reqres.in](https://reqres.in), utilizando o framework **Cypress**. Os testes cobrem os métodos HTTP `GET`, `POST` e `PUT`, garantindo a validação de funcionalidades essenciais.
 
 ---
 
@@ -8,61 +8,64 @@ Este projeto realiza testes automatizados de API REST utilizando o framework **C
 
 AUTOMACAO_API_CYPRESS/
 ├── cypress/
-│ └── e2e/
-│ ├── GET_user_especifico.cy.js
-│ ├── GET_user_lista_geral.cy.js
-│ ├── POST_novo_user.cy.js
-│ ├── PUT_atualizar_user.cy.js
-│ └── reports/ # Relatórios de testes em HTML
-├── cypress.config.js # Configuração do Cypress
-├── cypress.env.json # Variáveis de ambiente
-├── package.json # Dependências e scripts
+│   ├── downloads/               # (diretório padrão do Cypress para arquivos baixados)
+│   ├── e2e/                     # Casos de teste
+│   │   ├── GET_user_especifico.cy.js
+│   │   ├── GET_user_lista_geral.cy.js
+│   │   ├── POST_novo_user.cy.js
+│   │   └── PUT_atualizar_user.cy.js
+│   └── reports/                 # Relatórios gerados (.json e .html)
+├── node_modules/               # Dependências instaladas
 ├── .gitignore
-└── readme.md # Documentação do projeto
+├── cypress.config.js           # Configuração do Cypress
+├── cypress.env.json            # Variáveis de ambiente (URL, tokens, etc.)
+├── package.json                # Scripts e dependências do projeto
+├── package-lock.json
+└── README.md                   # Documentação do projeto
 
+2. Execute os testes em modo headless e gere o relatório HTML consolidado:
+    bash
+    npm run test:report
+    Esse comando executa:
 
----
+   -  Os testes com Cypress
 
-## 🚀 Execução dos Testes
+   -  Une todos os arquivos .json gerados
 
-1. **Instale as dependências** do projeto:
-   ```bash
-   npm install
+   - Cria um único relatório HTML consolidado em cypress/reports/html/report.html
 
-2. **Execute os testes via terminal:
-    ```bash
-    npx cypress run
-    Ou, para executar com a interface interativa:
-    ```bash
-    npx cypress open
+📊 Visualização do Relatório de Testes
+    Após a execução:
 
-🔍 Relatórios de Teste
-    Após a execução dos testes, um relatório em HTML será gerado automaticamente na pasta:
-    cypress/e2e/reports/
+    Acesse o arquivo:   
+    cypress/reports/html/report.html
+    Abra o arquivo .html diretamente no navegador para visualizar o resultado completo dos testes com detalhes.
 
-🔗 Como visualizar o relatório:
-    Copie o caminho do arquivo HTML gerado (por exemplo, index.html) e abra diretamente no navegador. Exemplo:
-    C:/Users/SeuUsuario/Projetos/AUTOMACAO_API_CYPRESS/cypress/e2e/reports/index.html
+🧹 Limpando relatórios antigos
+    Antes de executar novamente, você pode limpar todos os arquivos anteriores com: 
+    npm run clean:reports
 
 🔌 API Utilizada
-    Os testes foram criados com base na API pública Reqres:
-
-🌐 https://reqres.in
+    Base: https://reqres.in
 
     Endpoints testados:
-
     GET /users – Lista de usuários
 
     GET /users/:id – Usuário específico
 
     POST /users – Criação de novo usuário
 
-    PUT /users/:id – Atualização de usuário existente
+    PUT /users/:id – Atualização de usuário existente   
 
-📦 Dependências
+📦 Principais Dependências
     Cypress
 
-    Mocha Reporter / HTML Report Plugin (caso aplicável)
+    Mochawesome
+
+    mochawesome-merge
+
+    mochawesome-report-generator (marge)
 
 👩‍💻 Autor
     Paula Melo – Analista de Qualidade (QA)
+    Especialista em testes funcionais, automação de APIs e criação de relatórios de evidência.
